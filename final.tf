@@ -88,7 +88,7 @@ resource "aws_sns_topic" "sns" {
 EOF
 
   provisioner "local-exec" {
-    command = "aws sns subscribe --topic-arn ${arn:aws:sns:us-east-1:697430341089:email} --protocol email --notification-endpoint ${var.alarms_email}"
+    command = "aws sns subscribe --topic-arn arn:aws:sns:us-east-1:697430341089:email --protocol email --notification-endpoint ${var.alarms_email}"
     #command = "aws sns subscribe --topic-arn   arn:aws:sns:eu-west-1:871994821053:my-test-alarms-topic --protocol email --notification-endpoint ${var.alarms_email}"
   }
 }
