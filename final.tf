@@ -1,9 +1,6 @@
-variable "aws_region" {
-  default = "us-east-1"
-}
-
 provider "aws" {
-  region = var.aws_region
+  profile = "default"
+  region  = "us-east-1"
 }
 
 
